@@ -1,4 +1,4 @@
-export class Deck {
+class Deck {
     constructor() {
         this.cards = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A']
     }
@@ -8,7 +8,7 @@ export class Deck {
     }
 }
 
-export class Player {
+class Player {
 
     joinGame(game) {
         this.game = game;
@@ -22,7 +22,7 @@ export class Player {
     }
 }
 
-export class Dealer {
+class Dealer {
 
     constructor() {
         this.deck = new Deck();
@@ -40,7 +40,7 @@ export class Dealer {
     }
 }
 
-export class Blackjack {
+class Blackjack {
     constructor() {
         this.dealer = new Dealer()
         this.dealer.shuffleDeck()
@@ -53,3 +53,4 @@ export class Blackjack {
     }
 }
 
+module.exports = { Player, Blackjack }
